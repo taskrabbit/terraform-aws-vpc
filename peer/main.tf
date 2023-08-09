@@ -16,15 +16,11 @@ resource "aws_vpc_peering_connection" "peer" {
   vpc_id        = "${var.requester_vpc_id}"
 
   accepter {
-    allow_classic_link_to_remote_vpc = "${var.accepter_allow_classic_link_to_remote}"
     allow_remote_vpc_dns_resolution  = "${var.accepter_allow_remote_dns}"
-    allow_vpc_to_remote_classic_link = "${var.accepter_allow_to_remote_classic_link}"
   }
 
   requester {
-    allow_classic_link_to_remote_vpc = "${var.requester_allow_classic_link_to_remote}"
     allow_remote_vpc_dns_resolution  = "${var.requester_allow_remote_dns}"
-    allow_vpc_to_remote_classic_link = "${var.requester_allow_to_remote_classic_link}"
   }
 
   tags {
@@ -41,15 +37,11 @@ resource "aws_vpc_peering_connection_accepter" "peer_accept" {
   vpc_peering_connection_id = "${var.vpc_peering_connection_id}"
 
   accepter {
-    allow_classic_link_to_remote_vpc = "${var.accepter_allow_classic_link_to_remote}"
     allow_remote_vpc_dns_resolution  = "${var.accepter_allow_remote_dns}"
-    allow_vpc_to_remote_classic_link = "${var.accepter_allow_to_remote_classic_link}"
   }
 
   requester {
-    allow_classic_link_to_remote_vpc = "${var.requester_allow_classic_link_to_remote}"
     allow_remote_vpc_dns_resolution  = "${var.requester_allow_remote_dns}"
-    allow_vpc_to_remote_classic_link = "${var.requester_allow_to_remote_classic_link}"
   }
 
   tags {
