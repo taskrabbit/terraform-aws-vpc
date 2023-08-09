@@ -26,18 +26,6 @@ variable "assign_generated_ipv6_cidr_block" {
   default     = "false"
 }
 
-variable "enable_classiclink" {
-  type        = "string"
-  description = "A boolean flag to enable/disable ClassicLink for the VPC. Only valid in regions and accounts that support EC2 Classic. Defaults false."
-  default     = ""
-}
-
-variable "enable_classiclink_dns_support" {
-  type        = "string"
-  description = "A boolean flag to enable/disable ClassicLink DNS Support for the VPC. Only valid in regions and accounts that support EC2 Classic."
-  default     = "false"
-}
-
 variable "enable_dns" {
   type        = "string"
   description = "A boolean flag to enable/disable DNS support in the VPC. Defaults true."
