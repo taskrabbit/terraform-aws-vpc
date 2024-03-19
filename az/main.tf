@@ -103,11 +103,6 @@ data "aws_ami" "nat_ami" {
   }
 
   filter {
-    name   = "name"
-    values = ["amzn-ami-vpc-nat*"]
-  }
-
-  filter {
     name   = "root-device-type"
     values = ["ebs"]
   }
